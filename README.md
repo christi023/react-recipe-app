@@ -1,1 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Food Recipe App
+
+## A Food Recipe App that fetches data from EDAMAM API
