@@ -48,7 +48,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Food Searching App</h1>
+      <h1>Food Search App</h1>
       <form className="search-form" onSubmit={onSubmit}>
         {alert !== '' && <Alert alert={alert} />}
         <input
@@ -61,7 +61,9 @@ export default function App() {
 
         <input type="submit" value="search" />
       </form>
-      <div>{recipes !== [] && recipes.map((recipe, i) => <Recipes key={i} recipe={recipe} />)}</div>
+      <div className="recipes">
+        {recipes !== [] && recipes.map((recipe, i) => <Recipes key={i} recipe={recipe} />)}
+      </div>
     </div>
   );
 }

@@ -38,6 +38,8 @@
   text-decoration: none;
   list-style-type: none;
   outline: none;
+
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 }
 
 html {
@@ -46,18 +48,19 @@ html {
 
 .App {
   min-height: 205vh;
-  min-width: 160vw;
-  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  min-width: 100vw;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 h1 {
   font-size: 8rem;
   letter-spacing: 0.1rem;
   font-style: italic;
-  color: #40b48e;
+  color: darkgreen;
   text-shadow: 0 0.2rem 5rem rgb(119, 115, 115);
   text-transform: uppercase;
   margin: 4rem 0;
@@ -106,7 +109,7 @@ h1 {
 .search-form input[type='text'] {
   padding: 0 0.5rem;
   width: 60%;
-  color: #555;
+  color: black;
 }
 
 .search-form input[type='submit'] {
@@ -158,7 +161,7 @@ h1 {
 
 .recipe a {
   font-size: 1.8rem;
-  color: #40b48e;
+  color: darkgreen;
 }
 
 .recipe button {
@@ -184,18 +187,13 @@ h1 {
 
 .ingredient-text {
   font-size: 1.5rem;
-  color: #888;
+  color: black;
 }
 
 .ingredient-weight {
-  color: #40b48e;
+  color: darkgreen;
   font-size: 1.3rem;
 }
-
-/*display: grid;
-  grid-template-columns: repeat(5, minMax(100px, 1fr));
-  grid-gap: 40px;
-  position: relative; */
 
 @media screen and (max-width: 1024px) {
   .recipe {
@@ -206,13 +204,32 @@ h1 {
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 4rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
     font-style: italic;
     color: #40b48e;
     text-shadow: 0 0.2rem 5rem rgb(119, 115, 115);
     text-transform: uppercase;
-    margin: 4rem 0;
-    margin-left: 3em;
+    /* margin: 4rem 0;
+    margin-left: 3em;*/
+    padding-left: -45em;
+  }
+
+  .ingredient-text {
+    font-size: 2rem;
+    color: black;
+  }
+
+  .search-form {
+    width: 34rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    border-radius: 0.5rem;
+    margin-bottom: 5rem;
+    box-shadow: 1rem 2rem 5rem #aaa;
+    position: relative;
   }
 
   .search-form input {
@@ -225,7 +242,7 @@ h1 {
   }
   .search-form input[type='text'] {
     /*padding: 0 0.5rem;*/
-    width: 25%;
+    width: 35%;
     color: #555;
   }
 
@@ -242,6 +259,15 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
+  .App {
+    min-height: 205vh;
+    min-width: 120vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .recipe {
     grid-template-columns: repeat(2, minMax(100px, 1fr));
   }
